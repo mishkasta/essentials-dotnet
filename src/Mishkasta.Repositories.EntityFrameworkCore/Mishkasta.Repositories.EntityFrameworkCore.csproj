@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageId>Mishkasta.Repositories.EntityFrameworkCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>mishkasta</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Mishkasta.Repositories.Abstractions" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
