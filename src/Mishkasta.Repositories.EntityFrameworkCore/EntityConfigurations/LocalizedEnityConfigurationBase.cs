@@ -4,9 +4,9 @@ using Mishkasta.Common.Entities;
 
 namespace Mishkasta.Repositories.EntityFrameworkCore.EntityConfigurations;
 
-public abstract class LocalizedEntityConfigurationBase : IEntityTypeConfiguration<LocalizedEntity>
+public abstract class LocalizedEntityConfigurationBase<TEntity> : IEntityTypeConfiguration<TEntity> where TEntity : LocalizedEntity
 {
-    public void Configure(EntityTypeBuilder<LocalizedEntity> builder)
+    public void Configure(EntityTypeBuilder<TEntity> builder)
     {
         builder.Ignore(e => e.Locale);
 
@@ -14,5 +14,5 @@ public abstract class LocalizedEntityConfigurationBase : IEntityTypeConfiguratio
     }
 
 
-    protected abstract void AlsoConfigure(EntityTypeBuilder<LocalizedEntity> builder);
+    protected abstract void AlsoConfigure(EntityTypeBuilder<TEntity> builder);
 }
