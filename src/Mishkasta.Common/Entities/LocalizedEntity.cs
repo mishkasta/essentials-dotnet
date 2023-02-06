@@ -1,6 +1,6 @@
 namespace Mishkasta.Common.Entities;
 
-public class Translation : Entity
+public class LocalizedEntity : Entity
 {
     public int LocaleId { get; set; }
 
